@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+echo "-----> Installing Cbc 2.10.3"
+
+mkdir -p "$1" "$2"
+build=$(cd "$1/" && pwd)
+
+cd $1
+curl 'https://bintray.com/coin-or/download/download_file?file_path=Cbc-2.10.3-linux-x86_64-gcc4.8.tgz' -O
+mkdir -p vendor/cbc
+gzip -dc Cbc-2.10.3-linux-x86_64-gcc4.8.tgz | tar -C vendor/cbc -xf -
+
+mkdir -p $build/.profile.d
+echo 'PATH=$PATH:/app/vendor/cbc/bin' > $build/.profile.d/cbc.sh
