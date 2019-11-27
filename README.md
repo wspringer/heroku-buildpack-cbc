@@ -1,8 +1,8 @@
-# heroku-buildpack-cbc
+# README
 
-Use Cbc on Heroku?
+Support for running [Cbc](https://github.com/coin-or/Cbc) on Heroku.
 
-## Usage
+# Usage
 
     $ heroku config:add BUILDPACK_URL=https://github.com/wspringer/heroku-buildpack-cbc.git
 
