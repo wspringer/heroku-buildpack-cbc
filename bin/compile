@@ -11,5 +11,5 @@ mkdir -p vendor/cbc
 gzip -dc Cbc-2.10.3-linux-x86_64-gcc4.8.tgz | tar -C vendor/cbc -xf -
 
 mkdir -p $build/.profile.d
-echo 'PATH=$PATH:/app/vendor/cbc/bin' > $build/.profile.d/cbc.sh
-echo 'LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/cbc/lib' >> $build/.profile.d/cbc.sh
+echo 'export PATH=$PATH:/app/vendor/cbc/bin' > $build/.profile.d/cbc.sh
+echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/app/vendor/cbc/lib' >> $build/.profile.d/cbc.sh
